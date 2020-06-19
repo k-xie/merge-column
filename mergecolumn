@@ -1,0 +1,47 @@
+Sub 合并当前工作簿下的所有工作表()
+
+ '按照列格式合并'
+
+Application.ScreenUpdating = False
+
+ 
+
+For j = 1 To Sheets.Count
+
+ 
+
+   If Sheets(j).Name <> ActiveSheet.Name Then
+
+ 
+
+       X = Range("iv1").End(xlToLeft).Column + 1
+ 
+
+       Sheets(j).UsedRange.Copy Cells(1, X)
+
+ 
+
+   End If
+
+ 
+
+Next
+
+ 
+
+Cells(1, X).Select
+
+ 
+
+Application.ScreenUpdating = True
+
+ 
+
+MsgBox "当前工作簿下的全部工作表已经合并完毕！", vbInformation, "提示"
+
+ 
+
+End Sub
+
+ 
+
