@@ -29,7 +29,7 @@ Next
 
  
 
-Cells(1, X).Select
+Cells(1, 1).Select
 
  
 
